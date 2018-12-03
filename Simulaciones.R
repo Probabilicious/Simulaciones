@@ -7,12 +7,6 @@
 # Edgar Quiroz Castañeda
 # Jean Paul Ruiz Melo
 # Sandra Del Mar Soto Corderi
-#
-#declarar un vector
-y<-c(1,2,3,4)
-x<-c("a,b,c,d")
-#vector vacio
-x<-c()
 
 # HiperGeo(N, m, n)
 
@@ -23,13 +17,6 @@ simula_BinNeg<-function(n, p){
     x = sum(ker)
     return(x)
 }
-
-#Ejemplo
-#simula_BinNeg(5, 6, 0.5)
-
-#Gráfica de la simulacion
-
-
 # Poisson(λ)
 
 # Gamma(n, λ)
@@ -50,7 +37,7 @@ if(is.na(m)){
     stop("Valor no numérico")
 }
 if(m < 0) {
-    stop("Valor negativo inválidos")
+    stop("Valor negativo inválido")
 }
 
 # Generando Binomial Negativa
@@ -75,4 +62,4 @@ for(i in 1:m){
     randX[i] = simula_Gamma(n, lambda)
 }
 title = sprintf("Gamma con n=%1.1f, lambda=%1.1f", n, lambda)
-hist(randX, main=title)
+hist(randX, main=title, breaks = m/5)
