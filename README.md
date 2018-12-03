@@ -1,8 +1,8 @@
 # Simulaciones
-Curso de Probabilidad I
-Grupo 9015
-Profesor Jaime Vázquez Alamilla
-Ayudantes César Augusto Pérez Rosas, Daniela Portillo del Valle y Luis Gerardo Gage Ruíz
+* Curso de Probabilidad I
+* Grupo 9015
+* Profesor Jaime Vázquez Alamilla
+* Ayudantes César Augusto Pérez Rosas, Daniela Portillo del Valle y Luis Gerardo Gage Ruíz
 
 ### Integrantes:
  * Alan Ernesto Arteaga Vázquez
@@ -23,6 +23,7 @@ Sólo se usó los paquetes estándar de [R][1]
 ### Uso
         $Rscript Simulaciones.R M
 Donde M es la cantidad de valores a generar
-Se genera un documento PDF con histogramas de valores generados en cada función.
+Se imprimen los M valores generados y se genera un histograma en PDF por
+distribución con histogramas de los valores generados.
 
 [1]: https://www.r-project.org/
