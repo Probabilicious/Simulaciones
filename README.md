@@ -13,10 +13,10 @@ Ayudantes César Augusto Pérez Rosas, Daniela Portillo del Valle y Luis Gerardo
 
 ### Indicaciones
 Realice un programa que simule M valores de la distribución:
-* $$HiperGeo(N, m, n)$$
-* $$BinNeg(n, p)$$
-* $$Poisson( \lambda)$$
-* $$Gamma(N, \lambda)$$
+* HiperGeo(N, m, n)
+* BinNeg(n, p)
+* Poisson(lambda)
+* Gamma(N,lambda)
 
 ### Dependencias
 Sólo se usó los paquetes estándar de [R][1]
