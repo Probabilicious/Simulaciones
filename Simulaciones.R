@@ -8,11 +8,6 @@
 # Jean Paul Ruiz Melo
 # Sandra Del Mar Soto Corderi
 #
-
-library(gridExtra)
-library(R2HTML)
-
-
 #declarar un vector
 y<-c(1,2,3,4)
 x<-c("a,b,c,d")
@@ -23,8 +18,16 @@ x<-c()
 
 # BinNeg(n, p)
 
+#Para simular esta función tomamos el método de la transformación inversa de n variables
+#geometricas,
 simula_BinNeg<-function(m, n, p){
-  x = rnbinom(m, n, p)
+  x<-c()
+  u<-runif(m + n)
+  for(i in 1:m){
+    for(j in 1:n){
+      x[i]= log(u[i])/log(1-p)
+    }
+  }
   return(x)
 }
 
@@ -32,6 +35,7 @@ simula_BinNeg<-function(m, n, p){
 #simula_BinNeg(5, 6, 0.5)
 
 #Gráfica de la simulacion
+hist(s)
 
 # Poisson(λ)
 
