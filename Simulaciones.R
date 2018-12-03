@@ -49,6 +49,8 @@ for(i in 1:m){
     bn = simula_BinNeg(n, p)
     randX[i] = bn
 }
+print("Números aleatorios con distribución binomial negativa generados")
+print(randX)
 title = sprintf("Binomial negativa con n=%1.1f, p=%1.2f", n, p)
 hist(randX, main=title, breaks = m/5)
 
@@ -61,5 +63,7 @@ randX = numeric(m)
 for(i in 1:m){
     randX[i] = simula_Gamma(n, lambda)
 }
+print("Números aleatorios con distribución gamma generados")
+print(randX)
 title = sprintf("Gamma con n=%1.1f, lambda=%1.1f", n, lambda)
 hist(randX, main=title, breaks = m/5)
