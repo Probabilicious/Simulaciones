@@ -17,25 +17,18 @@ x<-c()
 # HiperGeo(N, m, n)
 
 # BinNeg(n, p)
-
-#Para simular esta función tomamos el método de la transformación inversa de n variables
-#geometricas,
-simula_BinNeg<-function(m, n, p){
-  x<-c()
-  u<-runif(m + n)
-  for(i in 1:m){
-    for(j in 1:n){
-      x[i]= log(u[i])/log(1-p)
-    }
-  }
-  return(x)
+simula_BinNeg<-function(n, p){
+    u = runif(n, 0, 1)
+    ker = sapply(u, function(k) floor(log(k)/log(1-p)) )
+    x = sum(ker)
+    return(x)
 }
 
 #Ejemplo
 #simula_BinNeg(5, 6, 0.5)
 
 #Gráfica de la simulacion
-hist(s)
+
 
 # Poisson(λ)
 
@@ -60,14 +53,26 @@ if(m < 0) {
     stop("Valor negativo inválidos")
 }
 
-#Generando Gamma
+# Generando Binomial Negativa
+n = 20
+p = 0.75
+randX = numeric(m)
+
+for(i in 1:m){
+    bn = simula_BinNeg(n, p)
+    randX[i] = bn
+}
+title = sprintf("Binomial negativa con n=%1.1f, p=%1.2f", n, p)
+hist(randX, main=title, breaks = m/5)
+
+
+# Generando Gamma
 n = 5
 lambda = 1
 randX = numeric(m)
 
 for(i in 1:m){
-    g = simula_Gamma(n, lambda)
-    randX[i] = g
+    randX[i] = simula_Gamma(n, lambda)
 }
-title = sprintf("Gamma with n=%1.1f, lambda=%1.1f", n, lambda)
-hist(randX, main=title, breaks=m/5)
+title = sprintf("Gamma con n=%1.1f, lambda=%1.1f", n, lambda)
+hist(randX, main=title)
