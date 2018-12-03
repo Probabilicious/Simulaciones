@@ -24,19 +24,27 @@ Sólo se usó los paquetes estándar de [R][1]
 Hay 4 archivos, donde cada archivo representa una simulacion, para correrlos hay que ejecutar los siguientes comandos en la terminal, dependiendo de la simulacion que se quiera hacer:
 
 *Para simulaciones de la distribucion HiperGeo(N, m, n)
+
         $Rscript SimulacionHiperGeo N m n M
+
 Donde M es la cantidad de valores a generar y N, m, n son los parámetros propios de la distribucion
 
 *Para simulaciones de la distribucion BinNeg(n, p)
+
         $Rscript SimulacionBinNeg n p M
+
 Donde M es la cantidad de valores a generar y n, p son los parámetros propios de la distribucion
 
 *Para simulaciones de la distribucion Poisson(lambda)
+
         $Rscript SimulacionPoisson lambda M
+
 Donde M es la cantidad de valores a generar y lambda es el parámetro propio de la distribucion
 
 *Para simulaciones de la distribucion Gamma(N,lambda)
+
         $Rscript SimulacionGamma N lambda M
+
 Donde M es la cantidad de valores a generar y N, lambda son los parámetros propios de la distribucion
 
 Se imprimen los M valores generados y se genera un histograma en PDF por
