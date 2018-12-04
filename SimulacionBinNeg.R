@@ -1,6 +1,6 @@
 # Tarea de Simulaciones en R
 # Simulaciones de variables aleatorias en R
-#Simulacion de Binomial Negativa
+# Simulacion de Binomial Negativa
 
 # Integrantes:
 # Alan Ernesto Arteaga Vázquez
@@ -22,7 +22,7 @@ simula_BinNeg<-function(n, p){
 #Revisando el valor de n, p y m
 args = commandArgs(trailingOnly=TRUE)
 if(length(args)==0){
-    stop("Uso: simulación.R M")
+    stop("Uso: SimulacionBinNeg.R n p m")
 }
 n = as.integer(args[1])
 if(is.na(n)){
@@ -58,4 +58,4 @@ for(i in 1:m){
 print("Números aleatorios con distribución binomial negativa generados")
 print(randX)
 title = sprintf("Binomial negativa con n=%1.1f, p=%1.2f", n, p)
-hist(randX, main=title, breaks = m/5)
+hist(randX, main=title, breaks = m/5, freq=F)

@@ -1,6 +1,6 @@
 # Tarea de Simulaciones en R
 # Simulaciones de variables aleatorias en R
-#Simulacion de Hipergeométrica
+# Simulacion de Hipergeométrica
 
 # Integrantes:
 # Alan Ernesto Arteaga Vázquez
@@ -41,7 +41,7 @@ simula_Hiper<-function(N, n, A){
 #Revisando el valor de N, n, A y m
 args = commandArgs(trailingOnly=TRUE)
 if(length(args)==0){
-    stop("Uso: simulación.R M")
+    stop("Uso: SimulacionHiperGeo.R N n A m")
 }
 
 N = as.integer(args[1])
@@ -86,4 +86,4 @@ for(i in 1:m){
 print("Números aleatorios con distribución hipergeométrica generados")
 print(randX)
 title = sprintf("Hipergeométrica con N=%1.1f, n=%1.2f, m=%1.2f ", N, n, m)
-hist(randX, main=title, breaks = m/n)
+hist(randX, main=title, breaks = m/n, freq=F)

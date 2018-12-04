@@ -1,6 +1,6 @@
 # Tarea de Simulaciones en R
 # Simulaciones de variables aleatorias en R
-#Simulacion de Gamma
+# Simulacion de Gamma
 
 # Integrantes:
 # Alan Ernesto Arteaga Vázquez
@@ -21,7 +21,7 @@ simula_Gamma <- function(n, lambda){
 #Revisando el valor de n, lambda y m
 args = commandArgs(trailingOnly=TRUE)
 if(length(args)==0){
-    stop("Uso: simulación.R M")
+    stop("Uso: SimulacionGamma.R n lambda m")
 }
 
 n = as.integer(args[1])
@@ -57,4 +57,4 @@ for(i in 1:m){
 print("Números aleatorios con distribución gamma generados")
 print(randX)
 title = sprintf("Gamma con n=%1.1f, lambda=%1.1f", n, lambda)
-hist(randX, main=title, breaks = m/5)
+hist(randX, main=title, breaks = m/5, freq=F)
