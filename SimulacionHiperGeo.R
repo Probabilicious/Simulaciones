@@ -86,4 +86,4 @@ for(i in 1:m){
 print("Números aleatorios con distribución hipergeométrica generados")
 print(randX)
 title = sprintf("Hipergeométrica con N=%1.1f, n=%1.2f, m=%1.2f ", N, n, m)
-hist(randX, main=title, breaks = m/n, freq=F)
+hist(randX, main=title, breaks = m, freq=F)

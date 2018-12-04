@@ -85,4 +85,4 @@ for(i in 1:m){
 print("Números aleatorios con distribución Poisson generados")
 print(randX)
 title = sprintf("Poisson con lambda=%1.1f, m=%d ", lambda, m)
-hist(randX, main=title, breaks = m/5 , freq=F)
+hist(randX, main=title, breaks = m , freq=F)

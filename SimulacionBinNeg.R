@@ -58,4 +58,4 @@ for(i in 1:m){
 print("Números aleatorios con distribución binomial negativa generados")
 print(randX)
 title = sprintf("Binomial negativa con n=%1.1f, p=%1.2f", n, p)
-hist(randX, main=title, breaks = m/5, freq=F)
+hist(randX, main=title, breaks = m, freq=F)

@@ -57,4 +57,4 @@ for(i in 1:m){
 print("Números aleatorios con distribución gamma generados")
 print(randX)
 title = sprintf("Gamma con n=%1.1f, lambda=%1.1f", n, lambda)
-hist(randX, main=title, breaks = m/5, freq=F)
+hist(randX, main=title, breaks = m, freq=F)
